@@ -1,12 +1,11 @@
 package com.StackIt.StackIt.repositories;
 
+import com.StackIt.StackIt.models.Comment;
 import com.StackIt.StackIt.models.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface QuestionRepo extends JpaRepository<Question , Integer> {
-    List<Question> findByStatusFalse();
+public interface CommentRepo extends JpaRepository<Comment,Integer> {
+    List<Comment> findByStatusFalse();
 }
